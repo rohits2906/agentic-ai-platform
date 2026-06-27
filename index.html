@@ -226,11 +226,15 @@
             <div class="subagent-circle sub-devops">DevOps</div>
             <div class="subagent-circle sub-embedded">Embedded</div>
             <div class="subagent-circle sub-developer">Developer</div>
-            <div class="route-line line-query"></div>
-            <div class="route-line line-python"></div>
-            <div class="route-line line-devops"></div>
-            <div class="route-line line-embedded"></div>
-            <div class="route-line line-developer"></div>
+            <!-- SVG layer for clean curved routing lines -->
+            <svg class="routing-svg" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
+              <path id="path-query" class="routing-path" d="M500 120 C500 180, 500 220, 500 260" />
+              <path id="path-python" class="routing-path" d="M500 260 C380 290, 220 320, 180 360" />
+              <path id="path-devops" class="routing-path" d="M500 260 C500 320, 500 360, 500 420" />
+              <path id="path-embedded" class="routing-path" d="M500 260 C620 290, 780 320, 820 360" />
+              <path id="path-developer" class="routing-path" d="M500 420 C420 440, 420 480, 500 520" />
+              <path id="path-misroute" class="routing-path misroute-path" d="M500 260 C520 280, 680 300, 740 340" />
+            </svg>
             <div class="misroute-bubble">
               <strong>Misroute</strong>
               <p>If the query goes to the wrong subagent, the master agent sees the mismatch, reroutes the task, and learns the better path.</p>
@@ -332,18 +336,47 @@
         </div>
         <div class="roadmap-line reveal">
           <article class="timeline-item">
+            <div class="timeline-icon" aria-hidden="true">
+              <!-- robot icon -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="12" rx="2" stroke="white" stroke-opacity="0.9" stroke-width="1.2" fill="none" />
+                <circle cx="8.5" cy="11" r="1.2" fill="white" opacity="0.95" />
+                <circle cx="15.5" cy="11" r="1.2" fill="white" opacity="0.95" />
+                <rect x="9" y="14" width="6" height="1.6" rx="0.8" fill="white" opacity="0.9" />
+              </svg>
+            </div>
             <span>LLM Fundamentals</span>
             <h3>Tokenization, prompting, hallucinations, embeddings, vector DBs</h3>
           </article>
           <article class="timeline-item">
+            <div class="timeline-icon" aria-hidden="true">
+              <!-- dna icon -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M7 4c2.5 2 3 6 5 8 2 2 3 6 5 8" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4 7c3 1 5 0 8 3 3 3 5 2 8 3" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
             <span>LangChain + RAG</span>
             <h3>Chains, memory, retrieval, LangSmith tracing, and hybrid data</h3>
           </article>
           <article class="timeline-item active-step">
+            <div class="timeline-icon" aria-hidden="true">
+              <!-- lightning icon -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M13 2L3 14h7l-1 8L21 10h-7l0-8z" fill="white" opacity="0.95" />
+              </svg>
+            </div>
             <span>Agentic AI</span>
             <h3>Tool-calling agents, ReAct loop, multi-agent systems — you are here</h3>
           </article>
           <article class="timeline-item">
+            <div class="timeline-icon" aria-hidden="true">
+              <!-- rocket icon -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M14 3c-1.5 1-3 3.5-3.5 5S9 12 9 12l5 5s2.5-1.5 4-3.5S22 10 21 8s-4-2-7-5z" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <path d="M7 21c1-1.5 2.5-3 4-4" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
             <span>LLMOps + Deploy</span>
             <h3>Production patterns, monitoring, cost control, and launch-ready systems</h3>
           </article>

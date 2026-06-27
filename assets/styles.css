@@ -223,16 +223,10 @@ pre { min-height: 280px; margin: 0; padding: 24px; white-space: pre-wrap; color:
 .subagent-circle,
 .misroute-bubble strong { font-weight: 800; }
 .master-agent-circle small { color: var(--muted); font-size: 0.92rem; }
-.route-line {
-  position: absolute;
-  border-radius: 999px;
-  background: rgba(77,227,255,.2);
-}
-.line-query { top: 132px; left: 50%; width: 2px; height: 110px; transform: translateX(-50%); }
-.line-python { top: 240px; left: 18%; width: 2px; height: 112px; }
-.line-devops { top: 240px; left: 50%; width: 2px; height: 112px; }
-.line-embedded { top: 240px; right: 18%; width: 2px; height: 112px; }
-.line-developer { top: 388px; left: 50%; width: 2px; height: 112px; }
+.routing-svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.routing-path { stroke: rgba(77,227,255,0.28); stroke-width: 6; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0.35; transition: stroke 220ms ease, stroke-width 220ms ease, opacity 220ms ease; }
+.routing-path.active { stroke: var(--cyan); stroke-width: 8; opacity: 1; }
+.misroute-path { stroke: rgba(255,99,132,0.28); }
 .misroute-bubble {
   position: absolute;
   top: 10px;
@@ -300,7 +294,25 @@ pre { min-height: 280px; margin: 0; padding: 24px; white-space: pre-wrap; color:
 .roadmap-line::before { content: ""; position: absolute; inset: 48px 0 auto 0; height: 2px; width: 100%; background: linear-gradient(90deg, var(--cyan), var(--amber)); opacity: .2; z-index: 0; }
 .roadmap-line { position: relative; }
 .timeline-item { position: relative; padding: 28px 24px 24px; border: 1px solid rgba(255,255,255,.08); border-radius: 28px; background: rgba(255,255,255,.04); box-shadow: 0 18px 40px rgba(0,0,0,.2); z-index: 1; }
-.timeline-item::before { content: ""; position: absolute; top: -18px; left: 50%; transform: translateX(-50%); width: 36px; height: 36px; border-radius: 50%; background: rgba(7,20,36,.9); border: 1px solid rgba(255,255,255,.12); box-shadow: 0 0 24px rgba(0,0,0,.18); }
+.timeline-item::before { display: none; }
+.timeline-icon {
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(77,227,255,0.18), rgba(255,184,77,0.12));
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  z-index: 2;
+}
+.timeline-icon svg { width: 40px; height: 40px; display: block; }
+.timeline-item .timeline-icon { opacity: 0.98; }
+.timeline-item.active-step .timeline-icon { background: linear-gradient(135deg, var(--cyan), var(--amber)); box-shadow: 0 12px 42px rgba(77,227,255,0.22); }
 .timeline-item span { display: block; color: var(--amber); font-weight: 900; margin-bottom: 14px; }
 .timeline-item h3 { margin: 0; color: var(--text); line-height: 1.5; }
 .active-step { border-color: rgba(255,184,77,.35); background: linear-gradient(180deg, rgba(255,184,77,.08), rgba(255,184,77,.03)); }

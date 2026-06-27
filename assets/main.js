@@ -24,11 +24,12 @@ const routeButtons = document.querySelectorAll(".route-button");
 const routeStatus = document.querySelector("#routeStatus");
 const queryCircle = document.querySelector(".query-circle");
 const masterCircle = document.querySelector(".master-agent-circle");
-const lineQuery = document.querySelector(".line-query");
-const linePython = document.querySelector(".line-python");
-const lineDevops = document.querySelector(".line-devops");
-const lineEmbedded = document.querySelector(".line-embedded");
-const lineDeveloper = document.querySelector(".line-developer");
+const pathQuery = document.querySelector("#path-query");
+const pathPython = document.querySelector("#path-python");
+const pathDevops = document.querySelector("#path-devops");
+const pathEmbedded = document.querySelector("#path-embedded");
+const pathDeveloper = document.querySelector("#path-developer");
+const pathMisroute = document.querySelector("#path-misroute");
 const subPython = document.querySelector(".sub-python");
 const subDevops = document.querySelector(".sub-devops");
 const subEmbedded = document.querySelector(".sub-embedded");
@@ -74,16 +75,12 @@ roleCards.forEach((card) => {
 });
 
 function resetRouteVisualization() {
-  linePython.style.opacity = 0.2;
-  lineDevops.style.opacity = 0.2;
-  lineEmbedded.style.opacity = 0.2;
-  lineDeveloper.style.opacity = 0.2;
+  [pathPython, pathDevops, pathEmbedded, pathDeveloper, pathMisroute].forEach(p => p && p.classList.remove('active'));
   subPython.classList.remove("route-highlight");
   subDevops.classList.remove("route-highlight");
   subEmbedded.classList.remove("route-highlight");
   subDeveloper.classList.remove("route-highlight");
   misrouteBubble.classList.remove("route-active");
-  misrouteBubble.style.opacity = 0.6;
   routeStatus.textContent = "Master Agent routes the query to the right specialist.";
   routeButtons.forEach((btn) => btn.classList.remove("active"));
 }
@@ -92,28 +89,29 @@ function highlightRoute(route) {
   resetRouteVisualization();
   switch (route) {
     case "python":
-      linePython.style.opacity = 1;
+      pathPython && pathPython.classList.add('active');
       subPython.classList.add("route-highlight");
       routeStatus.textContent = "Master Agent routes the Python question to the Python subagent for code and automation.";
       break;
     case "devops":
-      lineDevops.style.opacity = 1;
+      pathDevops && pathDevops.classList.add('active');
       subDevops.classList.add("route-highlight");
       routeStatus.textContent = "Master Agent routes the deployment incident to the DevOps subagent for logs and rollback guidance.";
       break;
     case "embedded":
-      lineEmbedded.style.opacity = 1;
+      pathEmbedded && pathEmbedded.classList.add('active');
       subEmbedded.classList.add("route-highlight");
       routeStatus.textContent = "Master Agent routes the device query to the Embedded subagent for telemetry and sensor context.";
       break;
     case "developer":
-      lineDeveloper.style.opacity = 1;
+      pathDeveloper && pathDeveloper.classList.add('active');
       subDeveloper.classList.add("route-highlight");
       routeStatus.textContent = "Master Agent routes the integration request to the Developer subagent for delivery and UI integration.";
       break;
     case "misroute":
-      lineDevops.style.opacity = 1;
+      pathDevops && pathDevops.classList.add('active');
       subDevops.classList.add("route-highlight");
+      pathMisroute && pathMisroute.classList.add('active');
       misrouteBubble.classList.add("route-active");
       routeStatus.textContent = "Master Agent first misroutes the query, then detects the mismatch and reroutes to the correct role.";
       break;
