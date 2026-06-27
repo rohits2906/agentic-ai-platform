@@ -1,6 +1,6 @@
 # AI Masterclass Demo
 
-An interactive single-page web application built using **HTML**, **CSS**, and **JavaScript** to demonstrate real-world AI concepts in a simple and engaging way.
+Interactive Agentic AI demo showcasing LLM orchestration, multi-agent workflows, workflow visualization, and role-based AI use cases built with HTML, CSS, and JavaScript.
 
 ## Features
 
