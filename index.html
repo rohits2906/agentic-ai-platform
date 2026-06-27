@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Masterclass  | From Developer to AI Builder</title>
+    <meta name="description" content="An interactive HTML demo page for an AI masterclass designed to impress developers, embedded engineers, DevOps engineers, and working professionals." />
+    <meta name="author" content="AI Masterclass" />
+    <meta property="og:title" content="AI Masterclass | From Developer to AI Builder" />
+    <meta property="og:description" content="A fascinating one-page demo showing why working professionals should enter AI now, with role-based use cases, workflow simulation, and a practical roadmap." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Masterclass| From Developer to AI Builder" />
+    <meta name="twitter:description" content="A fascinating one-page demo showing why developers and engineers should enter AI now." />
+    <script id="structured-data-jsonld" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI Masterclass",
+        "description": "An interactive AI masterclass demo for working professionals who want to become AI builders.",
+        "url": "__SITE_URL__"
+      }
+    </script>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <!-- @section: ambient-stage -->
+    <div class="stage-glow" aria-hidden="true"></div>
+    <div class="grid-surface" aria-hidden="true"></div>
+
+    <!-- @section: top-navigation -->
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="AI Masterclass demo home">
+        <span class="brand-mark">AI</span>
+        <span>Masterclass</span>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#why-ai">Why AI</a>
+        <a href="#roles">Roles</a>
+        <a href="#simulator">Live Demo</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- @section: hero-command-center -->
+      <section class="hero-shell section">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">AI Everywhere and Everyday</p>
+          <h1>Don’t just use AI tools. <span>Become the person who builds AI-powered solutions.</span></h1>
+          <p class="lead">A practical, high-impact AI masterclass for working professionals—Python developers, software engineers, embedded engineers, and DevOps teams—who want to turn existing skills into AI advantage.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#simulator">Run the visualization demo</a>
+            <a class="button ghost" href="#workflow">See the agentic workflow</a>
+          </div>
+          <div class="signal-row" aria-label="Key audience outcomes">
+            <div><strong>4x</strong><span>faster prototyping mindset</span></div>
+            <div><strong>30 days</strong><span>to a portfolio AI project</span></div>
+            <div><strong>Role-based</strong><span>learning, not generic theory</span></div>
+          </div>
+        </div>
+
+        <aside class="ai-orbit reveal" aria-label="AI career transformation visual">
+          <div class="orbit-ring ring-one"></div>
+          <div class="orbit-ring ring-two"></div>
+          <div class="core-node">AI<br />Builder</div>
+          <button class="orbit-pill pill-python" data-role="Python">Python Dev</button>
+          <button class="orbit-pill pill-devops" data-role="DevOps">DevOps</button>
+          <button class="orbit-pill pill-embedded" data-role="Embedded">Embedded</button>
+          <button class="orbit-pill pill-fullstack" data-role="Developer">Developer</button>
+          <div class="pulse-line line-one"></div>
+          <div class="pulse-line line-two"></div>
+        </aside>
+      </section>
+
+      <!-- @section: why-ai-pressure-map -->
+      <section id="why-ai" class="section pressure-section">
+        <div class="section-kicker reveal">Insights</div>
+        <div class="pressure-layout">
+          <div class="pressure-copy reveal">
+            <h2>AI is not replacing engineers. Engineers using AI are replacing slow workflows.</h2>
+            <p>Most professionals already have domain knowledge, coding discipline, debugging skills, system thinking, and deployment experience. The missing layer is how to connect those skills with LLMs, agents, RAG, automation, and AI product thinking.</p>
+          </div>
+          <div class="pressure-meter reveal" aria-label="AI opportunity meter">
+            <div class="meter-label"><span>Traditional workflow</span><span>AI-augmented workflow</span></div>
+            <div class="meter-track"><span class="meter-fill"></span></div>
+            <div class="comparison-grid">
+              <div class="comparison-row">
+                <div class="comparison-card manual">
+                  <span class="card-badge">Manual</span>
+                  <strong>Research</strong>
+                  <p>Gather data from scattered sources and summarize it yourself.</p>
+                </div>
+                <div class="comparison-card ai">
+                  <span class="card-badge">With AI</span>
+                  <strong>Research</strong>
+                  <p>AI collects context, summarizes quickly, and drafts a strong starting point.</p>
+                </div>
+              </div>
+              <div class="comparison-row">
+                <div class="comparison-card manual">
+                  <span class="card-badge">Manual</span>
+                  <strong>Code help</strong>
+                  <p>Write logic, debug issues, and test ideas step by step by hand.</p>
+                </div>
+                <div class="comparison-card ai">
+                  <span class="card-badge">With AI</span>
+                  <strong>Code help</strong>
+                  <p>AI suggests code, explains errors, and accelerates iteration.</p>
+                </div>
+              </div>
+              <div class="comparison-row">
+                <div class="comparison-card manual">
+                  <span class="card-badge">Manual</span>
+                  <strong>Workflow execution</strong>
+                  <p>Move tasks through many tools and manual follow-ups.</p>
+                </div>
+                <div class="comparison-card ai">
+                  <span class="card-badge">With AI</span>
+                  <strong>Workflow execution</strong>
+                  <p>Agents orchestrate steps, automate handoffs, and reduce friction.</p>
+                </div>
+              </div>
+              <div class="comparison-row">
+                <div class="comparison-card manual">
+                  <span class="card-badge">Manual</span>
+                  <strong>Product delivery</strong>
+                  <p>Build features slowly with lots of repetitive effort.</p>
+                </div>
+                <div class="comparison-card ai">
+                  <span class="card-badge">With AI</span>
+                  <strong>Product delivery</strong>
+                  <p>Teams ship faster with AI support for prototyping, testing, and docs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- @section: professional-role-map -->
+      <section id="roles" class="section role-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Actions</p>
+          <h2>Practical AI use cases relevant to different roles.</h2>
+        </div>
+        <div class="role-grid" id="roleGrid">
+          <article class="role-card active reveal" data-role="Python Developer" data-output="Build AI APIs, RAG apps, intelligent scripts, model evaluation pipelines, and automations." data-tags="LangChain,RAG pipelines,FAISS / ChromaDB,Agent tools,Groq API">
+            <span class="role-index">01</span>
+            <h3>Python Developer</h3>
+            <p>Move from writing backend scripts to building AI workflows, embeddings, LLM tools, and production-ready AI services.</p>
+          </article>
+          <article class="role-card reveal" data-role="Software Developer" data-output="Add AI features into apps: copilots, semantic search, chat interfaces, recommendations, and workflow agents." data-tags="Copilots,Semantic search,Chat UI,API integration,AI feature rollout">
+            <span class="role-index">02</span>
+            <h3>Software Developer</h3>
+            <p>Turn normal applications into smart applications with chat, search, agents, and context-aware interfaces.</p>
+          </article>
+          <article class="role-card reveal" data-role="Embedded Engineer" data-output="Connect sensor/device data with anomaly detection, predictive maintenance, tinyML thinking, and AI dashboards." data-tags="Sensor insights,Edge ML,Predictive alerts,Diagnostics,Firmware monitoring">
+            <span class="role-index">03</span>
+            <h3>Embedded Engineer</h3>
+            <p>Use AI around devices: diagnostics, logs, predictive alerts, vision models, and smarter monitoring systems.</p>
+          </article>
+          <article class="role-card reveal" data-role="DevOps Engineer" data-output="Automate incident summaries, log intelligence, deployment copilots, cost optimization, and AI-assisted observability." data-tags="CI/CD copilots,Observability,Incident summaries,Cost optimization,Infra automation">
+            <span class="role-index">04</span>
+            <h3>DevOps Engineer</h3>
+            <p>Build AI into CI/CD, observability, incident response, documentation, and infrastructure automation.</p>
+          </article>
+        </div>
+        <div class="role-output reveal" id="roleOutput">
+          <span>Selected path</span>
+          <strong>Python Developer</strong>
+          <p>Build AI APIs, RAG apps, intelligent scripts, model evaluation pipelines, and automations.</p>
+          <div class="role-tags" id="roleTags">
+            <span>LangChain</span>
+            <span>RAG pipelines</span>
+            <span>FAISS / ChromaDB</span>
+            <span>Agent tools</span>
+            <span>Groq API</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- @section: live-ai-workflow-simulator -->
+      <section id="simulator" class="section simulator-section">
+        <div class="simulator-copy reveal">
+          <p class="eyebrow">AI Workflow</p>
+          <h2>End-to-end AI workflow in real time.</h2>
+          <p>Click a problem. The page visualizes how a professional turns raw work into an AI-powered solution: input → context → model → action → business output.</p>
+          <div class="scenario-buttons" role="group" aria-label="AI workflow scenarios">
+            <button class="scenario active" data-scenario="code">Code Review Bot</button>
+            <button class="scenario" data-scenario="logs">Incident Analyzer</button>
+            <button class="scenario" data-scenario="device">Device Health AI</button>
+          </div>
+        </div>
+        <div class="workflow-board reveal" aria-live="polite">
+          <div class="terminal-window">
+            <div class="terminal-top"><span></span><span></span><span></span><b id="terminalTitle">Code Review Bot</b></div>
+            <pre id="terminalText"></pre>
+          </div>
+          <div class="pipeline" id="pipeline">
+            <div class="pipe-step"><b>01</b><span>Problem</span></div>
+            <div class="pipe-step"><b>02</b><span>Context</span></div>
+            <div class="pipe-step"><b>03</b><span>LLM / Model</span></div>
+            <div class="pipe-step"><b>04</b><span>Automation</span></div>
+            <div class="pipe-step"><b>05</b><span>Outcome</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- @section: agentic-workflow -->
+      <section id="workflow" class="section workflow-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Agentic AI workflow</p>
+          <h2>One intelligent loop, powered by many expert roles.</h2>
+          <p>This visual shows how a modern AI agent can turn a messy problem into a polished outcome by combining coding, systems thinking, embedded awareness, and operations discipline.</p>
+        </div>
+        <div class="workflow-showcase reveal">
+          <div class="workflow-visual master-agent-visual" aria-label="Master agent and subagent routing visualization">
+            <div class="query-circle">User query</div>
+            <div class="master-agent-circle">
+              <span>Master Agent</span>
+              <small>Orchestrator</small>
+            </div>
+            <div class="subagent-circle sub-python">Python</div>
+            <div class="subagent-circle sub-devops">DevOps</div>
+            <div class="subagent-circle sub-embedded">Embedded</div>
+            <div class="subagent-circle sub-developer">Developer</div>
+            <div class="route-line line-query"></div>
+            <div class="route-line line-python"></div>
+            <div class="route-line line-devops"></div>
+            <div class="route-line line-embedded"></div>
+            <div class="route-line line-developer"></div>
+            <div class="misroute-bubble">
+              <strong>Misroute</strong>
+              <p>If the query goes to the wrong subagent, the master agent sees the mismatch, reroutes the task, and learns the better path.</p>
+            </div>
+          </div>
+          <div class="agent-routing-controls reveal">
+            <p class="route-label">Try these queries to see the routing</p>
+            <div class="route-buttons" role="group" aria-label="Agent routing scenarios">
+              <button class="route-button active" data-route="python">Python debugging</button>
+              <button class="route-button" data-route="devops">Deployment incident</button>
+              <button class="route-button" data-route="embedded">Device health</button>
+              <button class="route-button" data-route="developer">Integration request</button>
+              <button class="route-button" data-route="misroute">Misroute example</button>
+            </div>
+            <div class="route-status" id="routeStatus">Master Agent routes the query to the right specialist.</div>
+          </div>
+          <div class="workflow-insights">
+            <article class="insight-card">
+              <h3>Master agent first</h3>
+              <p>The user query lands with a central orchestrator that decides which specialized role should handle each part of the problem.</p>
+            </article>
+            <article class="insight-card highlight">
+              <h3>Subagents are role specialists</h3>
+              <p>Each subagent represents a domain expert: Python for data and automation, DevOps for incident context, Embedded for device signals, and Developer for integration.</p>
+            </article>
+            <article class="insight-card">
+              <h3>Self-correcting routing</h3>
+              <p>If a route is wrong, the master agent detects the error and retries with a better target, keeping the loop robust and trustworthy.</p>
+            </article>
+          </div>
+          <div class="workflow-routing reveal">
+            <h3>Live routing demo</h3>
+            <div class="router-grid">
+              <div class="router-query">
+                <strong>User query</strong>
+                <p>“Analyze latency across services, find the likely cause, and suggest a safe rollback / monitoring change.”</p>
+              </div>
+              <div class="router-nodes">
+                <span class="router-node">Master Agent: route and verify</span>
+                <span class="router-node">Subagent: DevOps incident triage</span>
+                <span class="router-node">Subagent: Python automation</span>
+                <span class="router-node">Subagent: Embedded telemetry</span>
+              </div>
+            </div>
+            <p class="router-note">This visualization shows the exact decision point: the master agent chooses the best specialist, and the system corrects itself if the first choice is off.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- @section: agent-loop -->
+      <section id="agent-loop" class="section loop-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How the agent loop works</p>
+          <h2>Think → Act → Observe. Repeat until solved.</h2>
+          <p>Agentic AI lifecycle—from reasoning and tool selection to execution, feedback, and final response.</p>
+        </div>
+        <div class="loop-layout reveal">
+          <div class="loop-list">
+            <div class="loop-step">
+              <h3>Think (Reason)</h3>
+              <p>The agent receives the goal, current context, and past observations. It decides what the best next action is before any code runs.</p>
+            </div>
+            <div class="loop-step">
+              <h3>Act (Use a Tool)</h3>
+              <p>The agent selects a tool it can call, such as a DB query, API request, test run, or Slack message. This is how reasoning becomes real work.</p>
+            </div>
+            <div class="loop-step">
+              <h3>Observe (Read Result)</h3>
+              <p>The tool output is added back to the context. The agent now sees what happened and decides whether the goal is complete.</p>
+            </div>
+            <div class="loop-step">
+              <h3>Done (Respond)</h3>
+              <p>When the goal is reached, the agent exits the loop and delivers its final answer. Every step is visible and traceable.</p>
+            </div>
+          </div>
+          <div class="loop-state">
+            <div class="state-card">
+              <h3>Agentic AI in action</h3>
+              <p>A user gives a real problem, the agent routes it to multiple role-based skill sets, and the loop continues until the answer is complete.</p>
+              <div class="state-flow">
+                <span>Think — decide what to do next</span>
+                <span>Act — call a tool</span>
+                <span>Observe — read tool output</span>
+                <span>Done — deliver answer</span>
+              </div>
+            </div>
+            <div class="state-note">
+              <p><strong>Key insight:</strong> The model never runs your code directly. It decides which tool to use and the framework handles the loop. That is the mental model your audience needs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- @section: learning-roadmap -->
+      <section id="roadmap" class="section roadmap-section">
+        <div class="roadmap-header reveal">
+          <p class="eyebrow">Your learning roadmap</p>
+          <h2>Beginner to production in one continuous arc.</h2>
+        </div>
+        <div class="roadmap-line reveal">
+          <article class="timeline-item">
+            <span>LLM Fundamentals</span>
+            <h3>Tokenization, prompting, hallucinations, embeddings, vector DBs</h3>
+          </article>
+          <article class="timeline-item">
+            <span>LangChain + RAG</span>
+            <h3>Chains, memory, retrieval, LangSmith tracing, and hybrid data</h3>
+          </article>
+          <article class="timeline-item active-step">
+            <span>Agentic AI</span>
+            <h3>Tool-calling agents, ReAct loop, multi-agent systems — you are here</h3>
+          </article>
+          <article class="timeline-item">
+            <span>LLMOps + Deploy</span>
+            <h3>Production patterns, monitoring, cost control, and launch-ready systems</h3>
+          </article>
+        </div>
+      </section>
+
+      <!-- @section: final-call-to-action -->
+      <section class="section final-cta">
+        <div class="cta-panel reveal">
+          <span class="eyebrow">Closing line</span>
+          <h2>“If you already know technology, AI is not a new career. It is your next upgrade.”</h2>
+          <p>End the demo by inviting them to join the masterclass to build real AI projects, not just watch AI videos.</p>
+          <a class="button primary" href="#top">Restart demo</a>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="assets/main.js"></script>
+  </body>
+</html>
